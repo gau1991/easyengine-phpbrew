@@ -10,8 +10,6 @@ sudo echo -e "[user]\n\tname = EasyEngine\n\temail = root@easyengine.com" > ~/.g
 
 myecho
 
-wget -qO ee rt.cx/ee && sudo bash ee  || exit 1
-
 myecho
 # Install latest Ruby
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
