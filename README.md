@@ -56,3 +56,4 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   ```bash
   tail -f easyengine-vagrant/logs/*
   ```
+
