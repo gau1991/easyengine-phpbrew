@@ -162,11 +162,11 @@ Vagrant.configure("2") do |config|
   # If a www directory exists in the same directory as your Vagrantfile, a mapped directory
   # inside the VM will be created that acts as the default location for nginx sites. Put all
   # of your project files here that you want to access through the web server
-  #if vagrant_version >= "1.3.0"
-  #  config.vm.synced_folder "www/", "/srv/www/", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
-  #else
-  #  config.vm.synced_folder "www/", "/srv/www/", :owner => "www-data", :extra => 'dmode=775,fmode=774'
-  #end
+  if vagrant_version >= "1.3.0"
+    config.vm.synced_folder "www/", "/var/www/", :owner => "www-data", :mount_options => [ "dmode=775", "fmode=774" ]
+  else
+    config.vm.synced_folder "www/", "/var/www/", :owner => "www-data", :extra => 'dmode=775,fmode=774'
+  end
 
   #config.vm.provision "fix-no-tty", type: "shell" do |s|
   #  s.privileged = false
