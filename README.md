@@ -1,10 +1,13 @@
-[EasyEngine] (https://github.com/rtCamp/easyengine)-[Vagrant](https://vagrantup.com/)
+[EasyEngine] (https://github.com/rtCamp/easyengine)-[PHPBrew](https://github.com/phpbrew/phpbrew/)
 ==================
 
-This is a simple Vagrant file to test  EasyEngine on your any system using Vagrant.
+This is a simple Vagrant file to run multiple PHP Version with EasyEngine. Right now this setup is using custom vagrant box [ee-phpbrew](https://atlas.hashicorp.com/gau1991/boxes/ee-phpbrew), created for this project.
 
 Note: If you are using other that Ubuntu/Debian system, then installation steps will differ, but setup steps are same.
 
+## Vagrant box preinstalled 
+1. EasyEngine with Nginx and MySQL
+2. PHP 5.3, 5.4, 5.5 and 5.6
 
 ## Installation
 1. First we will install Virtual Box and Vagrant on our system.
@@ -29,9 +32,9 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   To change the distribution open the Vagrantfile and replace ubutnu/trusty64 with box name
 
   ```bash
-  git clone git@github.com:rtCamp/easyengine-vagrant.git
+  git clone git@github.com:gau1991/easyengine-phpbrew.git
 
-  cd easyengine-vagrant
+  cd easyengine-phpbrew
  ```
 2. Edit `ee-hosts` file and enter domain names that should be pointed to this vagrant box
 
@@ -56,4 +59,9 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   ```bash
   tail -f easyengine-vagrant/logs/*
   ```
-
+6. To switch PHP version use command
+  
+  ```
+  sudo ee-switch <PHP-VERSION>
+  ```
+  
