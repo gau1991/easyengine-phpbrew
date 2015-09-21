@@ -32,7 +32,7 @@ Note: If you are using other that Ubuntu/Debian system, then installation steps 
   To change the distribution open the Vagrantfile and replace ubutnu/trusty64 with box name
 
   ```bash
-  git clone git@github.com:gau1991/easyengine-phpbrew.git
+  git clone https://github.com/gau1991/easyengine-phpbrew.git
 
   cd easyengine-phpbrew
  ```
